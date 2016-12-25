@@ -6,14 +6,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Application {
 
 	public static void main(String[] args) {
-		
 		ApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
-		
-		
-		Object bean = context.getBean("rentialService2");
-		
-		System.out.println(bean);
-		
+		RentalService bean = context.getBean("rentialService2", RentalService.class);
+		System.out.println(bean.getName());		
 	}
 
 }

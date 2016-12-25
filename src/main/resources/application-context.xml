@@ -9,11 +9,22 @@
 
 <bean id="house" class="com.kadiryaka.bean.HouseProduct"/>
 
+<bean id="computer" class="com.kadiryaka.bean.ComputerProduct"/>
+
 <bean id="rentialService" class="com.kadiryaka.application.RentalService">
 	<constructor-arg ref="car"/>
 </bean>
-		
+
 <bean id="rentialService2" class="com.kadiryaka.application.RentalService">
+	<constructor-arg ref="house"/>
+	<constructor-arg index="1" value="Huzur Apartman"/>
+</bean>
+
+<bean id="rentialService3" class="com.kadiryaka.application.RentalService">
+	<constructor-arg ref="computer"/>
+</bean>
+		
+<bean id="rentialService4" class="com.kadiryaka.application.RentalService">
 	<constructor-arg ref="car"/>
 	<constructor-arg ref="house"/>
 </bean>
