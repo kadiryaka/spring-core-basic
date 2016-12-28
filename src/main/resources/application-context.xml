@@ -26,7 +26,7 @@
 		
 <bean id="rentialService4" class="com.kadiryaka.application.RentalService">
 	<constructor-arg ref="car"/>
-	<constructor-arg ref="house"/>
+	<property name="product2" ref="house"></property>
 </bean>
 
 </beans>
